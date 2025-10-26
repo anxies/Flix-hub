@@ -1,0 +1,26 @@
+﻿@model IList<Movies>
+
+@{
+    ViewData["Title"] = "Фильмы";
+}
+
+<div>
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>@movie.Name</td>
+                    <td>@movie.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+</div>

@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "Absolute_Cinema.Controllers.MoviesController",
+    "Method": "Create",
+    "RelativePath": "api/Movies/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Absolute_Cinema.Models.Dtos.MoviesDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Absolute_Cinema.Controllers.MoviesController",
+    "Method": "Get",
+    "RelativePath": "api/Movies/show",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Absolute_Cinema.Controllers.MoviesController",
+    "Method": "GetById",
+    "RelativePath": "api/Movies/show/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
