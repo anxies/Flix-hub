@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Absolute Cinema")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5770d28bb35d1840f566732d8c4f20c18b977085")]
 [assembly: System.Reflection.AssemblyProductAttribute("Absolute Cinema")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Absolute Cinema")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

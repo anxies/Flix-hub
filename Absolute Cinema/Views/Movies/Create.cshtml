@@ -1,0 +1,60 @@
+﻿@model Absolute_Cinema.Models.Dtos.MoviesDto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Movies</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+
+        <form id="movieForm" onsubmit="return false;">
+            <input type="text" id="Name" asp-for="Name" class="form-control" />
+            <input type="text" id="Description" asp-for="Description" class="form-control" />
+            <button type="button" onclick="sendMovie()">Создать</button>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller ="Home" asp-action="Index">Back to List</a>
+</div>
+
+<script>
+        async function sendMovie() {
+        const formData = {
+            Name: document.getElementById('Name').value,
+            Description: document.getElementById('Description').value
+        };
+
+        try {
+            const response = await fetch('/api/MoviesApi', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            if (!response.ok) {
+                const error = await response.json();
+                console.error('Ошибка:', error);
+                return;
+            }
+
+            const result = await response.json();
+            console.log('Создано:', result);
+
+        } catch (err) {
+            console.error('Сеть ошибка:', err);
+        }
+    }
+
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

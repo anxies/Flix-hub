@@ -1,13 +1,13 @@
 ﻿
-GET https://localhost:7271/api/movies/show
+GET https://localhost:7271/api/moviesapi/allMovies
 
 ###
-POST https://localhost:7271/api/movies/create
+POST https://localhost:7271/api/moviesapi/create
 Content-Type: application/json
 {
-  "name": "Papa Stalin",
-  "description": "Nazi is bad ones"
+  "name": "Mama Ryzvielt",
+  "description": "Nazi is bad ones like realy bad"
 }
 
 ###
-GET https://localhost:7271/api/movies/show/2
+GET https://localhost:7271/api/moviesapi/moviesById/3

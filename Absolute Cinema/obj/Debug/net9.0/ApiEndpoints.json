@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "Absolute_Cinema.Controllers.MoviesController",
+    "ContainingType": "Absolute_Cinema.Controllers.MoviesApiController",
     "Method": "Create",
-    "RelativePath": "api/Movies/create",
+    "RelativePath": "api/MoviesApi",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -16,9 +16,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Absolute_Cinema.Controllers.MoviesController",
+    "ContainingType": "Absolute_Cinema.Controllers.MoviesApiController",
     "Method": "Get",
-    "RelativePath": "api/Movies/show",
+    "RelativePath": "api/MoviesApi/allMovies",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -26,9 +26,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Absolute_Cinema.Controllers.MoviesController",
+    "ContainingType": "Absolute_Cinema.Controllers.MoviesApiController",
     "Method": "GetById",
-    "RelativePath": "api/Movies/show/{id}",
+    "RelativePath": "api/MoviesApi/moviesById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
