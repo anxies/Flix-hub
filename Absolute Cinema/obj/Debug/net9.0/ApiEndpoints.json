@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "Absolute_Cinema.Controllers.MoviesApiController",
+    "ContainingType": "Absolute_Cinema.Controllers.Api.MoviesApiController",
     "Method": "Create",
     "RelativePath": "api/MoviesApi",
     "HttpMethod": "POST",
@@ -8,15 +8,41 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "Absolute_Cinema.Models.Dtos.MoviesDto",
-        "IsRequired": true
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Absolute_Cinema.Controllers.MoviesApiController",
+    "ContainingType": "Absolute_Cinema.Controllers.Api.MoviesApiController",
+    "Method": "Update",
+    "RelativePath": "api/MoviesApi",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Absolute_Cinema.Controllers.Api.MoviesApiController",
     "Method": "Get",
     "RelativePath": "api/MoviesApi/allMovies",
     "HttpMethod": "GET",
@@ -26,7 +52,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Absolute_Cinema.Controllers.MoviesApiController",
+    "ContainingType": "Absolute_Cinema.Controllers.Api.MoviesApiController",
     "Method": "GetById",
     "RelativePath": "api/MoviesApi/moviesById/{id}",
     "HttpMethod": "GET",

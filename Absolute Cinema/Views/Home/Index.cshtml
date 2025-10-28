@@ -2,45 +2,9 @@
 @model ViewMovies
 
 @{
-    ViewData["Title"] = "Фильмы";
+    ViewData["Title"] = "Главная";
 }
 
 <div>
-    <table class="table table-striped mt-4">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Имя</th>
-                <th>Описание</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model.SelectedMovie != null)
-            {
-                 <tr>
-                    <td>@Model.SelectedMovie.Id</td>
-                    <td>@Model.SelectedMovie.Name</td>
-                    <td>@Model.SelectedMovie.Description</td>
-                </tr>
-            }
-            else
-            {
-                @for (int i = 0; i < Model.Movies.Count; i++)
-                {
-                    <tr>
-                        <td>@Model.Movies[i].Id</td>
-                        <td>@Model.Movies[i].Name</td>
-                        <td>@Model.Movies[i].Description</td>
-                    </tr>
-                }
-            }
-        </tbody>
-    </table>
-
-    <h2>Выберите нужный фильм</h2>
-    <form method="get" asp-action="Index">
-        <input type="number" name="id" min="1"/>
-        <button type="submit">Показать</button>
-        <a href="https://localhost:7271/">Назад к списку</a>
-    </form>
+    <p> Empty Bro</p>
 </div>

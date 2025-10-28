@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace Absolute_Cinema.Controllers
+namespace Absolute_Cinema.Controllers.Api
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -36,12 +36,18 @@ namespace Absolute_Cinema.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] MoviesDto dto) 
+        public IActionResult Create([FromForm] MoviesDto dto) 
         {
             
             var movie = _moviesRepository.Add(dto);
 
             return CreatedAtAction(nameof(GetById), new { id = movie.Id }, movie);
+        }
+
+        [HttpPut]
+        public IActionResult Update([FromForm] MoviesDto dto) 
+        { 
+            return Ok(dto);
         }
     }
 }

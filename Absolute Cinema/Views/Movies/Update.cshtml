@@ -1,0 +1,23 @@
+﻿@using Absolute_Cinema.ViewModels
+@model ViewMovies
+
+<div>
+    <form action="/" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Имя</th>
+                    <th>Описание</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>@Model.SelectedMovie.Id </td>
+                <td><input type="text" name="Name" value="@Model.SelectedMovie.Name" /> </td>
+                <td><input type="text" name="Description" value="@Model.SelectedMovie.Description" /> </td>
+                <td><button type="submit"> Изменить </button> </td>
+            </tr>
+        </table>
+    
+    </form>
+</div>

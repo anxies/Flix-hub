@@ -10,20 +10,24 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-
-        <form id="movieForm" onsubmit="return false;">
+        <form asp-controller ="MoviesApi" asp-action ="Create" id="movieForm">
+            
+            <label> Название</label>
             <input type="text" id="Name" asp-for="Name" class="form-control" />
+
+            <label> Описание</label>
             <input type="text" id="Description" asp-for="Description" class="form-control" />
-            <button type="button" onclick="sendMovie()">Создать</button>
+
+            <button type="submit">Создать</button>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-controller ="Home" asp-action="Index">Back to List</a>
+    <a  asp-controller ="Home" asp-action="Index" class="text-black text-decoration-none">Back to List</a>
 </div>
 
-<script>
+@* <script>
         async function sendMovie() {
         const formData = {
             Name: document.getElementById('Name').value,
@@ -54,7 +58,7 @@
     }
 
 </script>
-
+ *@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
