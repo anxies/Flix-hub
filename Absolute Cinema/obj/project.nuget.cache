@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WfmGoKgTol0=",
+  "dgSpecHash": "gwbmJly7gM0=",
   "success": true,
   "projectFilePath": "C:\\Projects\\Absolute Cinema\\Absolute Cinema\\Absolute Cinema.csproj",
   "expectedPackageFiles": [
@@ -81,6 +81,7 @@
     "C:\\Users\\Алексей\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.10\\microsoft.entityframeworkcore.relational.9.0.10.nupkg.sha512",
     "C:\\Users\\Алексей\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\9.0.10\\microsoft.entityframeworkcore.sqlite.9.0.10.nupkg.sha512",
     "C:\\Users\\Алексей\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\9.0.10\\microsoft.entityframeworkcore.sqlite.core.9.0.10.nupkg.sha512",
+    "C:\\Users\\Алексей\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\9.0.0\\microsoft.entityframeworkcore.tools.9.0.0.nupkg.sha512",
     "C:\\Users\\Алексей\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.10\\microsoft.extensions.caching.abstractions.9.0.10.nupkg.sha512",
     "C:\\Users\\Алексей\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.10\\microsoft.extensions.caching.memory.9.0.10.nupkg.sha512",
     "C:\\Users\\Алексей\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.10\\microsoft.extensions.configuration.abstractions.9.0.10.nupkg.sha512",

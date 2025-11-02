@@ -2,22 +2,21 @@
 @model ViewMovies
 
 <div>
-    <form action="/" method="post">
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Имя</th>
-                    <th>Описание</th>
-                </tr>
-            </thead>
+    <table>
+        <thead>
             <tr>
-                <td>@Model.SelectedMovie.Id </td>
-                <td><input type="text" name="Name" value="@Model.SelectedMovie.Name" /> </td>
-                <td><input type="text" name="Description" value="@Model.SelectedMovie.Description" /> </td>
-                <td><button type="submit"> Изменить </button> </td>
+                <th>Id</th>
+                <th>Имя</th>
+                <th>Описание</th>
             </tr>
-        </table>
-    
-    </form>
+        </thead>
+        <tr>
+            <td><input type="number" id="Id" name="Id" value="@Model.SelectedMovie.Id" /> </td>
+            <td><input type="text" id="Name" name="Name" value="@Model.SelectedMovie.Name" /> </td>
+            <td><input type="text" id="Description" name="Description" value="@Model.SelectedMovie.Description" /> </td>
+            <td><button onclick="Update()"> Изменить </button> </td>
+        </tr>
+    </table>
 </div>
+
+<script src="/js/UpdatePage.js"></script>

@@ -1,6 +1,8 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\js\MainPage.js
 wwwroot\js\site.js
+wwwroot\js\UpdatePage.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -123,3 +125,5 @@ C:\Projects\Absolute Cinema\Absolute Cinema\wwwroot\lib\jquery\dist\jquery.slim.
 C:\Projects\Absolute Cinema\Absolute Cinema\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Projects\Absolute Cinema\Absolute Cinema\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Projects\Absolute Cinema\Absolute Cinema\wwwroot\lib\jquery\LICENSE.txt
+C:\Projects\Absolute Cinema\Absolute Cinema\wwwroot\js\UpdatePage.js
+C:\Projects\Absolute Cinema\Absolute Cinema\wwwroot\js\MainPage.js

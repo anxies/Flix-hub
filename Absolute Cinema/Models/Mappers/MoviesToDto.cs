@@ -6,11 +6,16 @@ namespace Absolute_Cinema.Models.Mappers
     {
         public static Movies DtoToMovies(MoviesDto dto)
         {
-            return new Movies
+            var movie = new Movies
             {
                 Name = dto.Name,
-                Description = dto.Description
+                Description = dto.Description            
             };
+            if (dto.Id.HasValue )
+            {
+                movie.Id = dto.Id.Value;
+            }
+            return movie;
         }
     }
 }

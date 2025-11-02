@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Absolute_Cinema.Controllers.Api
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class MoviesApiController : ControllerBase
     {
-        MoviesRepository _moviesRepository;
+        private readonly MoviesRepository _moviesRepository;
 
         public MoviesApiController(MoviesRepository movies) 
         {
@@ -45,9 +45,20 @@ namespace Absolute_Cinema.Controllers.Api
         }
 
         [HttpPut]
-        public IActionResult Update([FromForm] MoviesDto dto) 
+        public IActionResult Update([FromBody] MoviesDto dto) 
         { 
-            return Ok(dto);
+            _moviesRepository.Update(dto);
+
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            Console.WriteLine(id);
+            _moviesRepository.Delete(id);
+
+            return NoContent();
         }
     }
 }

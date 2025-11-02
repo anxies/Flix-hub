@@ -339,3 +339,5 @@ C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\ru\Microsoft.CodeAn
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Projects\Absolute Cinema\Absolute Cinema\obj\Debug\net9.0\compressed\qkbvb14c3a-cf7bxegjw6.gz
+C:\Projects\Absolute Cinema\Absolute Cinema\obj\Debug\net9.0\compressed\r5q7xthiz4-8hw5eu0dja.gz

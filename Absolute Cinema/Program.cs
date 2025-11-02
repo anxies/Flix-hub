@@ -34,7 +34,7 @@ namespace Absolute_Cinema
             app.UseRouting();
 
             app.UseAuthorization();
-
+            
             app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",

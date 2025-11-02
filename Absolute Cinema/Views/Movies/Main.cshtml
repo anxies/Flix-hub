@@ -20,10 +20,10 @@
                     <td>@Model.SelectedMovie.Name</td>
                     <td>@Model.SelectedMovie.Description</td>
                     <td>
-                        <form asp-controller="Movies" asp-action="Update">
-                            <input type="hidden" name="id" value="@(Model.SelectedMovie.Id)" />
-                            <button type="submit">Изменить</button>
-                        </form>
+                        <button onclick="location.href = '/Movies/Update?id=@Model.SelectedMovie.Id'">Изменить</button>
+                    </td>
+                    <td>
+                        <button onclick="Delete(this)">Удалить</button>
                     </td>
                 </tr>
             }
@@ -32,14 +32,14 @@
                 @for (int i = 0; i < Model.Movies.Count; i++)
                 {
                     <tr>
-                        <td>@Model.Movies[i].Id</td>
+                        <td class="Id">@Model.Movies[i].Id</td>
                         <td>@Model.Movies[i].Name</td>
                         <td>@Model.Movies[i].Description</td>
                         <td>
-                            <form asp-controller="Movies" asp-action="Update">
-                                <input type="hidden" name="id" value="@(i + 1)" />
-                                <button type="submit">Изменить</button>
-                            </form>
+                            <button onclick="location.href = '/Movies/Update?id=@Model.Movies[i].Id'">Изменить</button>
+                        </td>
+                        <td>
+                            <button onclick="Delete(this)">Удалить</button>
                         </td>
                     </tr>
                 }
@@ -48,9 +48,11 @@
     </table>
 
     <h2>Выберите нужный фильм</h2>
-    <form asp-controller ="Movies" asp-action="Main">
+    <form asp-controller="Movies" asp-action="Main">
         <input type="number" name="id" min="1" />
         <button type="submit">Показать</button>
         <a class="text-black text-decoration-none" href="https://localhost:7271/Movies/Main">Назад к списку</a>
     </form>
 </div>
+
+<script src="/js/MainPage.js"></script>

@@ -27,38 +27,6 @@
     <a  asp-controller ="Home" asp-action="Index" class="text-black text-decoration-none">Back to List</a>
 </div>
 
-@* <script>
-        async function sendMovie() {
-        const formData = {
-            Name: document.getElementById('Name').value,
-            Description: document.getElementById('Description').value
-        };
-
-        try {
-            const response = await fetch('/api/MoviesApi', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-            
-            if (!response.ok) {
-                const error = await response.json();
-                console.error('Ошибка:', error);
-                return;
-            }
-
-            const result = await response.json();
-            console.log('Создано:', result);
-
-        } catch (err) {
-            console.error('Сеть ошибка:', err);
-        }
-    }
-
-</script>
- *@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

@@ -2,6 +2,8 @@
 using Absolute_Cinema.Models;
 using Absolute_Cinema.Models.Dtos;
 using Absolute_Cinema.Models.Mappers;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Absolute_Cinema.Repositories
 {
@@ -20,10 +22,14 @@ namespace Absolute_Cinema.Repositories
         {
             if (movies != null)
             {
-                moviesContext.Movies.Add(MoviesToDto.DtoToMovies(movies));
+                var mov = MoviesToDto.DtoToMovies(movies);
+
+                mov.Id = 0;
+
+                moviesContext.Movies.Add(mov);
                 moviesContext.SaveChanges();
 
-                return MoviesToDto.DtoToMovies(movies);
+                return mov;
             }
 
              throw new Exception();
@@ -47,6 +53,39 @@ namespace Absolute_Cinema.Repositories
         { 
             return moviesContext.Movies.ToList();
         }
-        
+
+        public Movies Update(MoviesDto movies)
+        {
+            if (movies is null)
+            {
+                throw new ArgumentNullException(nameof(movies));
+            }
+
+            var existingMovie = moviesContext.Movies.Find(movies.Id);
+            if (existingMovie is null)
+            {
+                throw new ArgumentException($"Movie with ID {movies.Id} not found");
+            }
+
+            existingMovie.Name = movies.Name;
+            existingMovie.Description = movies.Description;
+
+            moviesContext.SaveChanges();
+            return existingMovie;
+        }
+
+        public void Delete(int id)
+        {
+            var movie = moviesContext.Movies.Find(id);
+            if (movie is not null)
+            {
+                moviesContext.Movies.Remove(movie);
+                moviesContext.SaveChanges();
+            }
+            else
+            {
+                throw new Exception($"Такого объекта не существует по id: {id}");
+            }
+        }
     }
 }
