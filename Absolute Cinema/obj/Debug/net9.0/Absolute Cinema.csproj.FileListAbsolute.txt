@@ -129,7 +129,6 @@ C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\System.Composition.
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\System.Composition.Hosting.dll
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\System.Composition.Runtime.dll
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\System.Composition.TypedParts.dll
-C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\System.Text.Json.dll
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -218,7 +217,6 @@ C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\runtimes\win-x64\na
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Projects\Absolute Cinema\Absolute Cinema\obj\Debug\net9.0\Absolute Cinema.csproj.AssemblyReference.cache
 C:\Projects\Absolute Cinema\Absolute Cinema\obj\Debug\net9.0\Absolute.6240385A.Up2Date
-C:\Projects\Absolute Cinema\Absolute Cinema\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Projects\Absolute Cinema\Absolute Cinema\obj\Debug\net9.0\Absolute Cinema.sourcelink.json
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\Microsoft.Build.dll
@@ -339,5 +337,12 @@ C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\ru\Microsoft.CodeAn
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
-C:\Projects\Absolute Cinema\Absolute Cinema\obj\Debug\net9.0\compressed\qkbvb14c3a-cf7bxegjw6.gz
 C:\Projects\Absolute Cinema\Absolute Cinema\obj\Debug\net9.0\compressed\r5q7xthiz4-8hw5eu0dja.gz
+C:\Projects\Absolute Cinema\Absolute Cinema\obj\Debug\net9.0\compressed\qkbvb14c3a-pwodau101p.gz
+C:\Projects\Absolute Cinema\Absolute Cinema\obj\Debug\net9.0\compressed\995b2ifylz-3xarzibkqd.gz
+C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Projects\Absolute Cinema\Absolute Cinema\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Projects\Absolute Cinema\Absolute Cinema\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

@@ -1,0 +1,18 @@
+﻿@using Absolute_Cinema.ViewModels
+
+@model ViewMovies
+
+@for (int i = 0; i < Model.Movies.Count; i++)
+{
+    <tr>
+        <td class="Id">@Model.Movies[i].Id</td>
+        <td>@Model.Movies[i].Name</td>
+        <td>@Model.Movies[i].Description</td>
+        <td>
+            <button onclick="location.href = '/Movies/Update?id=@Model.Movies[i].Id'">Изменить</button>
+        </td>
+        <td>
+            <button onclick="Delete(this)">Удалить</button>
+        </td>
+    </tr>
+}

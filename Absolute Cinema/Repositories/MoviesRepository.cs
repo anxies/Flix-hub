@@ -18,16 +18,14 @@ namespace Absolute_Cinema.Repositories
         }
 
         
-        public Movies Add(MoviesDto movies)
+        public async Task<Movies> AddAsync(MoviesDto movies)
         {
             if (movies != null)
             {
                 var mov = MoviesToDto.DtoToMovies(movies);
 
-                mov.Id = 0;
-
-                moviesContext.Movies.Add(mov);
-                moviesContext.SaveChanges();
+                await moviesContext.Movies.AddAsync(mov);
+                await moviesContext.SaveChangesAsync();
 
                 return mov;
             }
@@ -35,10 +33,10 @@ namespace Absolute_Cinema.Repositories
              throw new Exception();
         }
 
-        public Movies GetById(int id)
+        public async Task<Movies> GetByIdAsync(int id)
         {
-            var movie = moviesContext.Movies.Find(id);
-
+            var movie = await moviesContext.Movies.FindAsync(id);
+        
             if (movie != null)
             {
                 return movie;
@@ -49,19 +47,20 @@ namespace Absolute_Cinema.Repositories
             }
         }
 
-        public List<Movies> GetMovies() 
+        public async Task<List<Movies>> GetMoviesAsync() 
         { 
-            return moviesContext.Movies.ToList();
+            var list = await moviesContext.Movies.ToListAsync();
+            return list;
         }
 
-        public Movies Update(MoviesDto movies)
+        public async Task<Movies> UpdateAsync(MoviesDto movies)
         {
             if (movies is null)
             {
                 throw new ArgumentNullException(nameof(movies));
             }
 
-            var existingMovie = moviesContext.Movies.Find(movies.Id);
+            var existingMovie = await moviesContext.Movies.FindAsync(movies.Id);
             if (existingMovie is null)
             {
                 throw new ArgumentException($"Movie with ID {movies.Id} not found");
@@ -70,17 +69,19 @@ namespace Absolute_Cinema.Repositories
             existingMovie.Name = movies.Name;
             existingMovie.Description = movies.Description;
 
-            moviesContext.SaveChanges();
+            await moviesContext.SaveChangesAsync();
+
             return existingMovie;
         }
 
-        public void Delete(int id)
+        public async Task DeleteAsync(int id)
         {
-            var movie = moviesContext.Movies.Find(id);
+            var movie = await moviesContext.Movies.FindAsync(id);
+
             if (movie is not null)
             {
                 moviesContext.Movies.Remove(movie);
-                moviesContext.SaveChanges();
+                await moviesContext.SaveChangesAsync();
             }
             else
             {

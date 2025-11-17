@@ -1,5 +1,6 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\js\CreatePage.js
 wwwroot\js\MainPage.js
 wwwroot\js\site.js
 wwwroot\js\UpdatePage.js
@@ -127,3 +128,4 @@ C:\Projects\Absolute Cinema\Absolute Cinema\wwwroot\lib\jquery\dist\jquery.slim.
 C:\Projects\Absolute Cinema\Absolute Cinema\wwwroot\lib\jquery\LICENSE.txt
 C:\Projects\Absolute Cinema\Absolute Cinema\wwwroot\js\UpdatePage.js
 C:\Projects\Absolute Cinema\Absolute Cinema\wwwroot\js\MainPage.js
+C:\Projects\Absolute Cinema\Absolute Cinema\wwwroot\js\CreatePage.js

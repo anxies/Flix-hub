@@ -15,34 +15,11 @@
         <tbody>
             @if (Model.SelectedMovie != null)
             {
-                <tr>
-                    <td>@Model.SelectedMovie.Id</td>
-                    <td>@Model.SelectedMovie.Name</td>
-                    <td>@Model.SelectedMovie.Description</td>
-                    <td>
-                        <button onclick="location.href = '/Movies/Update?id=@Model.SelectedMovie.Id'">Изменить</button>
-                    </td>
-                    <td>
-                        <button onclick="Delete(this)">Удалить</button>
-                    </td>
-                </tr>
+                @await Html.PartialAsync("_PartialMain", Model);
             }
             else
             {
-                @for (int i = 0; i < Model.Movies.Count; i++)
-                {
-                    <tr>
-                        <td class="Id">@Model.Movies[i].Id</td>
-                        <td>@Model.Movies[i].Name</td>
-                        <td>@Model.Movies[i].Description</td>
-                        <td>
-                            <button onclick="location.href = '/Movies/Update?id=@Model.Movies[i].Id'">Изменить</button>
-                        </td>
-                        <td>
-                            <button onclick="Delete(this)">Удалить</button>
-                        </td>
-                    </tr>
-                }
+                @await Html.PartialAsync("_PartialMainAll", Model);
             }
         </tbody>
     </table>

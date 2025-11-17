@@ -23,7 +23,7 @@ namespace Absolute_Cinema.Controllers
 
         public async Task<IActionResult> Index(int? id)
         {
-            var movies = moviesRepository.GetMovies();
+            var movies = await moviesRepository.GetMoviesAsync();
 
             var model = new ViewMovies
             {

@@ -1,6 +1,8 @@
 using Absolute_Cinema.Enteties;
 using Absolute_Cinema.Models;
 using Absolute_Cinema.Repositories;
+using Absolute_Cinema.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Absolute_Cinema
@@ -18,7 +20,11 @@ namespace Absolute_Cinema
                 options.UseSqlite("Data Source = Movies.db")
             );
 
+            builder.Services.AddIdentityApiEndpoints<IdentityUser>()
+                .AddEntityFrameworkStores<MoviesContext>();
+
             builder.Services.AddScoped<MoviesRepository>();
+            builder.Services.AddScoped<IViewMoviesService, ViewMoviesService>();
 
             var app = builder.Build();
 
@@ -34,7 +40,7 @@ namespace Absolute_Cinema
             app.UseRouting();
 
             app.UseAuthorization();
-            
+
             app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",

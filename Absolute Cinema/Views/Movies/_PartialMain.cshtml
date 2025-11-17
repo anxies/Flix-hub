@@ -1,0 +1,25 @@
+﻿@using Absolute_Cinema.ViewModels;
+@model ViewMovies;
+
+<table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Имя</th>
+            <th>Описание</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>@Model.SelectedMovie.Id</td>
+                <td>@Model.SelectedMovie.Name</td>
+                <td>@Model.SelectedMovie.Description</td>
+                <td>
+                    <button onclick="location.href = '/Movies/Update?id=@Model.SelectedMovie.Id'">Изменить</button>
+                </td>
+                <td>
+                    <button onclick="Delete(this)">Удалить</button>
+                </td>
+            </tr>
+    </tbody>
+</table>

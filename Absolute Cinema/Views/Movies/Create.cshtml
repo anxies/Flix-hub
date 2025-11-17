@@ -10,13 +10,13 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-controller ="MoviesApi" asp-action ="Create" id="movieForm">
+        <form id="movieForm" onsubmit="SendData(event)">
             
             <label> Название</label>
-            <input type="text" id="Name" asp-for="Name" class="form-control" />
+            <input type="text"  asp-for="Name" class="form-control" />
 
             <label> Описание</label>
-            <input type="text" id="Description" asp-for="Description" class="form-control" />
+            <input type="text"  asp-for="Description" class="form-control" />
 
             <button type="submit">Создать</button>
         </form>
@@ -30,3 +30,5 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+<script src="~/js/CreatePage.js"></script>

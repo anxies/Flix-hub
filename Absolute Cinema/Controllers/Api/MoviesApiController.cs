@@ -1,5 +1,6 @@
 ﻿using Absolute_Cinema.Models.Dtos;
 using Absolute_Cinema.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -18,45 +19,45 @@ namespace Absolute_Cinema.Controllers.Api
         }
 
         [HttpGet("allMovies")]
-       public IActionResult Get() 
+       public async Task<IActionResult> Get() 
         {
-            return Ok(_moviesRepository.GetMovies());
+            var movies = await _moviesRepository.GetMoviesAsync();
+            return Ok(movies);
         }
 
         [HttpGet("moviesById/{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var movies = _moviesRepository.GetMovies();
+            var movies = await _moviesRepository.GetMoviesAsync();
             int index = id - 1;
             if (movies[index].Id > 0 && id <= movies.Count) 
             {
-                return Ok(_moviesRepository.GetById(id));
+                return Ok(_moviesRepository.GetByIdAsync(id));
             }
             return BadRequest();
         }
 
         [HttpPost]
-        public IActionResult Create([FromForm] MoviesDto dto) 
+        public async Task<IActionResult> Create([FromForm] MoviesDto dto) 
         {
-            
-            var movie = _moviesRepository.Add(dto);
+            Console.WriteLine(dto);
+            var movie = await _moviesRepository.AddAsync(dto);
 
             return CreatedAtAction(nameof(GetById), new { id = movie.Id }, movie);
         }
 
         [HttpPut]
-        public IActionResult Update([FromBody] MoviesDto dto) 
+        public async Task<IActionResult> Update([FromBody] MoviesDto dto) 
         { 
-            _moviesRepository.Update(dto);
+            await _moviesRepository.UpdateAsync(dto);
 
             return Ok();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            Console.WriteLine(id);
-            _moviesRepository.Delete(id);
+           await _moviesRepository.DeleteAsync(id);
 
             return NoContent();
         }

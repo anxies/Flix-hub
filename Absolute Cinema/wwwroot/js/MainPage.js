@@ -18,8 +18,6 @@ function Delete(button) {
         })
 }
 
-function RedirectToUpdate(button) {
-    const row = button.closest("tr");
-    const idCell = row.querySelector(".Id");
-    const id = idCell.textContent
+function RedirectToUpdate() {
+    
 }
