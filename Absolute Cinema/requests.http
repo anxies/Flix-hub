@@ -1,5 +1,5 @@
 ﻿
-GET https://localhost:7271/api/moviesapi/allMovies
+GET http://localhost:5091/moviesapi/allMovies
 
 ###
 POST https://localhost:7271/api/moviesapi/create
@@ -10,4 +10,4 @@ Content-Type: application/json
 }
 
 ###
-GET https://localhost:7271/api/moviesapi/moviesById/3
+GET http://localhost:5091/moviesapi/moviesById/3

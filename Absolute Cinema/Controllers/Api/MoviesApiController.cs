@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Absolute_Cinema.Controllers.Api
 {
-    [Route("[controller]")]
+    [Route($"[controller]")]
     [ApiController]
     public class MoviesApiController : ControllerBase
     {
@@ -36,7 +36,7 @@ namespace Absolute_Cinema.Controllers.Api
             }
             return BadRequest();
         }
-
+               
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] MoviesDto dto) 
         {

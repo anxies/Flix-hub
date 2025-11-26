@@ -17,7 +17,7 @@ namespace Absolute_Cinema
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<MoviesContext>(options =>
-                options.UseSqlite("Data Source = Movies.db")
+                options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
             );
 
             builder.Services.AddIdentityApiEndpoints<IdentityUser>()
@@ -32,16 +32,19 @@ namespace Absolute_Cinema
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                  // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
             app.UseHttpsRedirection();
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapStaticAssets();
+
+            app.MapIdentityApi<IdentityUser>();
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}")

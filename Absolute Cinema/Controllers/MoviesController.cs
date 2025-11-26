@@ -2,12 +2,14 @@
 using Absolute_Cinema.Repositories;
 using Absolute_Cinema.Services;
 using Absolute_Cinema.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Absolute_Cinema.Controllers
 {
+    //[Authorize]
     public class MoviesController : Controller
     {
         private readonly MoviesRepository _repository;
